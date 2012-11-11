@@ -12,7 +12,7 @@ Ext.application({
                 },
                 {
                     xtype: 'video',
-                    url: 'http://192.168.0.195:8080/video.webm'
+                    url: 'http://192.168.0.195:8080/video.mp4'
                 }
             ]
         })
