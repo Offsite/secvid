@@ -1,0 +1,57 @@
+var http = require('http');
+var fs = require('fs');
+var index = fs.readFileSync('index.html');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end(index);
+}).listen(9615);
+
+
+
+
+//Server Security Module
+    
+    //Hardware ID
+        //when a mobile device attempts to connect to the server, Request Hardware ID
+        //check hardware ID with database
+            //if ID correct, pass login access token to mobile device
+            //if ID incorrect, error message
+    
+    //User Credentials
+        //Create credentials for a new user
+            //Receive new username, encrypted password and security answers from mobile device
+            //decrypt password and security answers
+            //Check password strength
+                //check length (at least 8 characters)
+                //check for both upper and lower case letters
+                //check for both letters and numbers
+                //check if the password is in the system's dictionary (including words/numbers related to the company and users
+                //if password too weak, send error message to mobile device
+            //store credentials in the database
+            //calculate password expiry date and store in database
+            //send success message to mobile device
+            
+        //User Login
+            //Receive credentials from mobile device
+            //decrypt password
+            //check database for credentials given
+                //if username has lockout: error message, deny access
+                //if password is older than 3 months: error message, go to password change (add early warning?)
+                //if credentials correct, continue to security question
+            //Security Question
+                //send security question to mobile device
+                //receive encrypted answer from mobile device
+                //decrypt answer
+                //check answer against database
+                //if answer correct, grant access
+                    //pass access token to the mobile device security module
+                //if credentials incorrect (or security questions answer incorrect)
+                    //error message
+                    //increment "wrong" (counter for failed attempts) (resets when any user successfully logs in)************
+                    //if too many failed attempts, set lockout (lockout until specific time/date 1 hour later)
+
+    
+    
+        
+ 

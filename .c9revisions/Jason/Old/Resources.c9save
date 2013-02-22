@@ -1,0 +1,3 @@
+{"ts":1357942864206,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":["jakeguy49@gmail.com"],"silentsave":false,"ts":1357942912918,"patch":[[{"diffs":[[1,"Password Hashing + random # concatenation\nhttp://www.switchonthecode.com/tutorials/secure-authentication-without-ssl-using-javascript"]],"start1":0,"start2":0,"length1":0,"length2":133}]],"length":133,"saved":false}
+{"contributors":["jakeguy49@gmail.com"],"silentsave":false,"ts":1359148116271,"patch":[[{"diffs":[[0,"vascript"],[1,"\nhttp://stackoverflow.com/questions/6084360/node-js-as-a-simple-web-server\nPost and Get"]],"start1":125,"start2":125,"length1":8,"length2":95}]],"length":220,"saved":false}

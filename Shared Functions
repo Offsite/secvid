@@ -1,0 +1,7 @@
+Richard
+getHID  //returns hardware ID
+displaymessage(message)  //displays a success/error message
+getusername //returns username entered
+getpassword //returns password entered
+displaysecQ(question)   //displays a security question to the user
+getsecA //returns answer to security question entered

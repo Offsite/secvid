@@ -1,0 +1,46 @@
+[
+    {
+        "code": "05",
+        "description": "Boilermaker"
+    },
+    {
+        "code": "10",
+        "description": "Carpenters"
+    },
+    {
+        "code": "15",
+        "description": "Electricians"
+    },
+    {
+        "code": "20",
+        "description": "Insulators"
+    },
+    {
+        "code": "25",
+        "description": "Ironworkers"
+    },
+    {
+        "code": "30",
+        "description": "Labourers"
+    },
+    {
+        "code": "35",
+        "description": "Masons"
+    },
+    {
+        "code": "40",
+        "description": "Millwrights"
+    },
+    {
+        "code": "45",
+        "description": "Operators"
+    },
+    {
+        "code": "55",
+        "description": "Pipefitters"
+    },
+    {
+        "code": "60",
+        "description": "Scaffolders"
+    },
+]

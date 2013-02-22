@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html style="position:fixed;height:100%;width:100%"> 
+    <head> 
+        <meta charset="utf-8"> 
+        <title>My JWPlayer</title>
+        <script type="text/javascript" src="./src/lib/jwplayer/jwplayer.js"></script>
+    </head> 
+    <body style="position:fixed;height:100%;width:100%">
+    
+<table width="100%" height="100%" cellspacing="0" cellpadding="5" border="0">
+    <td width="50%">
+            <div id='player_1'></div>
+    </td>
+    <td width="50%">
+            <div id='player_2'></div>
+    </td>
+</table>
+    
+        <script type='text/javascript'>
+          jwplayer('player_1').setup({
+            streamer: 'rtmp://10.227.2.221/',
+            file: 'cam',
+            width: "100%",
+            height: "100%",
+            primary: "flash",
+            autostart: "true",
+            bufferlength: '2',
+            //controls: "false",
+            mute: "true",
+          });
+        </script>
+        <script type='text/javascript'>
+          jwplayer('player_2').setup({
+            file: "rtmp://s2pchzxmtymn2k.cloudfront.net/cfx/st/mp4:sintel.mp4",
+            width: "100%",
+            height: "100%",
+            primary: "flash",
+            image: "http://content.bitsontherun.com/thumbs/3XnJSIm4-640.jpg",
+            autostart: "true",
+            //controls: "false",
+            mute: "true",
+            allowscriptaccess:'always',
+          });
+        </script>
+        <script type='text/javascript'>
+          jwplayer('player_3').setup({
+            file: "rtmp://s2pchzxmtymn2k.cloudfront.net/cfx/st/mp4:sintel.mp4",
+            width: "100%",
+            height: "100%",
+            primary: "flash",
+            image: "http://content.bitsontherun.com/thumbs/3XnJSIm4-640.jpg",
+            autostart: "true",
+            //controls: "false",
+            mute: "true",
+          });
+        </script>
+        <script type='text/javascript'>
+          jwplayer('player_4').setup({
+            file: "rtmp://s2pchzxmtymn2k.cloudfront.net/cfx/st/mp4:sintel.mp4",
+            width: "100%",
+            height: "100%",
+            primary: "flash",
+            image: "http://content.bitsontherun.com/thumbs/3XnJSIm4-640.jpg",
+            autostart: "true",
+            //controls: "false",
+            mute: "true",
+          });
+        </script>
+    </body> 
+</html>
