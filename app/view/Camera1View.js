@@ -24,12 +24,6 @@ Ext.define('secvid.view.Camera1View', {
                 styleHtmlContent: true,
                 html: 'Some information about Camera 1'
             },
-            {
-                xtype: 'panel',
-                flex: 2,
-                styleHtmlContent: true,
-                html: 'Hello'
-            },
         ],
         listeners: [
             {

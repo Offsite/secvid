@@ -28,6 +28,7 @@ Ext.define('secvid.view.ServerSettingsView', {
             },*/
             {
                 xtype:  'fieldset',
+                docked: 'top',
                 title:  "Server Address",
                 instructions:   "Enter the Server's IP Address and Port",
                 id: 'serverData',
