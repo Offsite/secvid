@@ -102,6 +102,7 @@ Ext.define("secvid.controller.MainController", {
         var ServerStore = Ext.getStore('ServerStore');
         var newValues = this.getServerSettings();
         ServerStore.add(newValues);
+        ServerStore.sync();
         window.global.settingsSaved = 1;  //*********************temporary. In the future, should only be set if settings are correctly saved.**************
         console.log(newValues.serverAddress);
         console.log(newValues.portNumber);
