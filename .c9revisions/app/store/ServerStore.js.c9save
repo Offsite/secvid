@@ -1,0 +1,5 @@
+{"ts":1362344883435,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1362345483118,"patch":[[{"diffs":[[1,"Ext.define(\"secvid.store.SeverStore\", {\r\n    extend: \"Ext.data.Store\",\r\n    config:\r\n    {\r\n        model: 'TaskCodes.model.taskcodeModel',\r\n    \tstoreId: 'taskcodeLocalStore',\r\n        proxy:\r\n        {\r\n            type: 'localstorage',\r\n            id: 'task-code-local'\r\n        }\r\n    }\r\n});"]],"start1":0,"start2":0,"length1":0,"length2":296}]],"length":296,"saved":false}
+{"ts":1362345503267,"patch":[[{"diffs":[[0,"d: '"],[-1,"task-code-l"],[1,"ServerStoreL"],[0,"ocal"]],"start1":253,"start2":253,"length1":19,"length2":20}]],"length":297,"saved":false}
+{"ts":1362345516735,"patch":[[{"diffs":[[0,"l: '"],[-1,"TaskCodes.model.taskcode"],[1,"secvid.model.Server"],[0,"Mode"]],"start1":104,"start2":104,"length1":32,"length2":27}]],"length":292,"saved":false}
+{"ts":1362345558065,"patch":[[{"diffs":[[0,"    "],[-1,"\t"],[1,"    "],[0,"stor"]],"start1":136,"start2":136,"length1":9,"length2":12}]],"length":295,"saved":false}
