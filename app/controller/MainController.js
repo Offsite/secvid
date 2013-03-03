@@ -101,7 +101,6 @@ Ext.define("secvid.controller.MainController", {
         console.log('onSaveServerCommand');
         var ServerStore = Ext.getStore('ServerStore');
         var newValues = this.getServerSettings();
-        ServerStore.removeAll();
         ServerStore.add(newValues);
         ServerStore.sync();
         window.global.settingsSaved = 1;  //*********************temporary. In the future, should only be set if settings are correctly saved.**************
@@ -492,9 +491,5 @@ Ext.define("secvid.controller.MainController", {
 		this.callParent(arguments);
         window.localStorage.clear('all');
 		console.log('initialize MainController');
-        window.localStorage.clear('all');
-        
-        
-        
 	}
 });
