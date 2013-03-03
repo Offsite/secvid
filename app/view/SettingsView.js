@@ -3,6 +3,7 @@ Ext.define('secvid.view.SettingsView', {
     extend: 'Ext.Container',
     alias:  'widget.SettingsView',
     config: {
+        layout: 'hbox',
         scrollable: false,
         items: [
             {
@@ -20,7 +21,8 @@ Ext.define('secvid.view.SettingsView', {
             },
             {
                 xtype: 'LoginFormView',
-                anchor: "50% 100%",
+                flex: 1,
+                
             },
             {
                 xtype: 'ServerSettingsView',

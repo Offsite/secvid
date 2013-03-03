@@ -1,8 +1,8 @@
 Ext.application({
     name: 'secvid',
-    models:         [],
+    models:         ['deviceModel', 'userModel'],
     views:          ['LoginFormView','HomeView','SettingsView','ServerSettingsView', 'SupportView', 'Camera1View', 'Camera2View', 'HomeViewPlaceHolder'],
-    stores:         [],
+    stores:         ['deviceStore', 'userStore'],
     controllers:    ['MainController'],
 
     launch: function() {
@@ -24,6 +24,8 @@ Ext.application({
             xtype: 'Camera2View'
         };
         
-        Ext.Viewport.add([homeView, SettingsView, Camera1View, Camera2View]);
+        
+        //Ext.Viewport.add([homeView, SettingsView, Camera1View, Camera2View]);
+        Ext.Viewport.add([SettingsView, Camera1View, Camera2View]);
     }
 });

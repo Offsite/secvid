@@ -5,13 +5,13 @@ Ext.define("secvid.store.deviceStore", {
         model: 'secvid.model.deviceModel',
 		//storeId: 'deviceStore',
 		autoLoad: true,
-        proxy:
+        /*proxy:
         {
             type: 'ajax',
             url: 'app/data/taskcodes.json'
         }
+        */
         
     }
 });
-
 

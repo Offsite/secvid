@@ -13,3 +13,5 @@
 {"ts":1361482278080,"patch":[[{"diffs":[[0,"',\r\n"],[-1,"                layout: 'fit',\r\n"],[0,"    "]],"start1":658,"start2":658,"length1":40,"length2":8}]],"length":1534,"saved":false}
 {"contributors":[],"silentsave":false,"ts":1361483536199,"patch":[[{"diffs":[[0,"e,\r\n"],[-1,"        layout: 'hbox',\r\n"],[0,"    "]],"start1":153,"start2":153,"length1":33,"length2":8}]],"length":1509,"saved":false}
 {"ts":1361483575746,"patch":[[{"diffs":[[0,"                "],[-1,"flex: 1"],[1,"anchor: \"50% 100%\""],[0,",\r\n            }"]],"start1":637,"start2":637,"length1":39,"length2":50}]],"length":1520,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1361833479375,"patch":[[{"diffs":[[0,"    "],[-1,"anchor: \"50% 100%\","],[1,"flex: 1,\r\n                "],[0,"\r\n  "]],"start1":649,"start2":649,"length1":27,"length2":34}]],"length":1527,"saved":false}
+{"ts":1361833550402,"patch":[[{"diffs":[[0," config: {\r\n"],[1,"        layout: 'hbox',\r\n"],[0,"        scro"]],"start1":117,"start2":117,"length1":24,"length2":49}]],"length":1552,"saved":false}

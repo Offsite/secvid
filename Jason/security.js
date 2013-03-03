@@ -1,3 +1,99 @@
+//Change Password Function
+changepassword: function()
+    {
+        var userdata = window.global.currentuser;
+        var authpass = userdata.get('password');
+        Ext.Msg.prompt('Change Password', "Enter the current password for user " + username + ".", function(button, passwordIn)        
+        {
+            if (button == "ok")
+                {
+                    if (passwordIn != authpass) //if credentials incorrect
+                                {
+                                    Ext.Msg.alert('Login Status', 'Password Incorrect', Ext.emptyFn);
+                                    window.global.userLoggedOn = 0;
+                                }    
+                            else
+                                //Password Correct
+                                Ext.Msg.prompt('Change Password', "Enter new password", function(button, newPassword)    
+                                {
+                                    if (button == "ok")
+                                    {
+                                        authpass = newPassword;
+                                        Ext.Msg.prompt('Confirm new Password', "Enter new password again", function(button, confPassword)
+                                        {
+                                            if (button == "ok")
+                                            {
+                                                if (confPassword == newPassword)
+                                                {
+                                                    userdata.set('password', newPassword);
+                                                    Ext.Msg.alert('Password Changed', 'Your Password has been successfully changed', Ext.emptyFn);
+                                                }
+                                                else
+                                                {
+                                                    Ext.Msg.alert('Mismatch', 'Your confirmed password does not match your new password. Try Again', Ext.emptyFn);
+                                                }
+                                            }
+                                        });
+                                    }
+                                });
+                   
+                       
+                }
+            
+        });
+    }
+
+
+//Change Security Question function
+changesecQ: function()
+{
+    var userdata = window.global.currentuser;
+    var secQ = userdata.get('secQ');
+    var secA = userdata.get('secA');
+    Ext.Msg.prompt('Answer Current Security Question', secQ, function(button, answer)       
+        {
+            if (button == "ok")
+                {
+                        
+                    //Compare
+                    if (answer != secA)   //incorrect security answer
+                    {
+                        //display error message
+                        Ext.Msg.alert('Login Status', 'Incorrect Answer', Ext.emptyFn);
+                    }
+                    else
+                    {
+                        Ext.Msg.prompt('New Security Question', 'Enter a new Security Question', function(button, question)
+                        {
+                            secQ = question;
+                            Ext.Msg.prompt('New Security Answer', 'Enter the answer to your new Question:' + secQ, function(button, answer)
+                            {
+                                secA = answer;
+                                Ext.Msg.confirm("Verify your Question and Answer", "Your Security Question is: " + secQ + 'and your Answer is: ' + userdata.get('secA') + ". Is this correct?", function(button)
+                                {
+                                    if (button == "yes")
+                                    {
+                                        userdata.set('secQ', secQ);
+                                        userdata.set('secA', secA);
+                                    }
+                                    else
+                                    {
+                                        Ext.Msg.alert('Security Question', 'Security Question and Answer not changed', Ext.emptyFn);
+                                    }
+                                })
+                            });
+                        });
+                    }
+                        
+                       
+                }
+            
+        });
+}
+
+
+
+
 //Security
 //revision  A
 //Date:     1/2/2013
@@ -7,11 +103,21 @@
 var lockout = 0;
 var wrong = 0;
 
+
+        /*//Load Stores (don't need to do this if they're set to autoload
+        var deviceStore = Ext.getStore('deviceStore');
+        deviceStore.load();
+        
+        var userStore = Ext.getStore('userStore');
+        userStore.load();
+        */
+
 //Mobile Device Security Module
 
-
+    
     //User Login
-    function login()
+    //function login()
+    login: function()
         {
         //Validate device
         //Retrieve Hardware ID from the device
@@ -23,7 +129,7 @@ var wrong = 0;
             else
             //User Login
                 {
-                //Load Authorized user data from server //Decrypt too?
+                //Load Authorized user data
                 //Username
                     //Receive username from App Logic
                     var username = getusername();
@@ -35,7 +141,7 @@ var wrong = 0;
                     else
                     //Password
                     {
-                        //Receive password from App Logic
+                        //Load password from App Logic
                         var password = getpassword();
                         //Load the correct password
                         var authpass = userdata.get('password');

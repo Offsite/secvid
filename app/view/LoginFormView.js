@@ -25,7 +25,7 @@ Ext.define('secvid.view.LoginFormView', {
                 xtype:  'fieldset',
                 title:  'Change Login',
                 instructions:   'Enter your user name and password.',
-                id: 'loginData',
+                //id: 'loginData',
                 items: 
                 [
                     {

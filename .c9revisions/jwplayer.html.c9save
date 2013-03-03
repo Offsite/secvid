@@ -62,3 +62,11 @@
 {"ts":1361493558734,"patch":[[{"diffs":[[0,"e: '"],[-1,"live"],[1,"cam1"],[0,"',\r\n"]],"start1":714,"start2":714,"length1":12,"length2":12}]],"length":2403,"saved":false}
 {"ts":1361495851191,"patch":[[{"diffs":[[0,"le: 'cam"],[-1,"1"],[0,"',\r\n    "]],"start1":713,"start2":713,"length1":17,"length2":16}]],"length":2402,"saved":false}
 {"ts":1361495887371,"patch":[[{"diffs":[[0,"221/"],[-1,"flvplayback/"],[0,"',\r\n"]],"start1":679,"start2":679,"length1":20,"length2":8}]],"length":2390,"saved":false}
+{"ts":1361496429077,"patch":[[{"diffs":[[0,"7.2.221/"],[1,"flvplayback"],[0,"',\r\n    "]],"start1":675,"start2":675,"length1":16,"length2":27}]],"length":2401,"saved":false}
+{"ts":1361496589632,"patch":[[{"diffs":[[0,"p://"],[-1,"10.227.2.221"],[1,"localhost"],[0,"/flv"]],"start1":666,"start2":666,"length1":20,"length2":17}]],"length":2398,"saved":false}
+{"ts":1361496637454,"patch":[[{"diffs":[[0,"    "],[-1,"streamer"],[1,"file"],[0,": 'r"]],"start1":648,"start2":648,"length1":16,"length2":12},{"diffs":[[0,"back"],[-1,"',\r\n            file: '"],[1,":"],[0,"cam'"]],"start1":683,"start2":683,"length1":31,"length2":9}]],"length":2372,"saved":false}
+{"ts":1361496674703,"patch":[[{"diffs":[[0,"p://"],[-1,"localhost"],[1,"10.227.2.221"],[0,"/flv"]],"start1":662,"start2":662,"length1":17,"length2":20}]],"length":2375,"saved":false}
+{"ts":1361496718167,"patch":[[{"diffs":[[0,"back:cam"],[1,".ts"],[0,"',\r\n    "]],"start1":686,"start2":686,"length1":16,"length2":19}]],"length":2378,"saved":false}
+{"ts":1361496738324,"patch":[[{"diffs":[[0,":cam"],[-1,".ts"],[0,"',\r\n"]],"start1":690,"start2":690,"length1":11,"length2":8}]],"length":2375,"saved":false}
+{"ts":1361496825282,"patch":[[{"diffs":[[0,"back"],[-1,":cam"],[0,"',\r\n"]],"start1":686,"start2":686,"length1":12,"length2":8}]],"length":2371,"saved":false}
+{"ts":1361496835779,"patch":[[{"diffs":[[0,"playback"],[1,"/cam"],[0,"',\r\n    "]],"start1":682,"start2":682,"length1":16,"length2":20}]],"length":2375,"saved":false}

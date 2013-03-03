@@ -1,15 +1,15 @@
 [
     {
         "username": "testuser",
-        "password": "40",
+        "password": "1",
         "secQ": "type the word test",
         "secA": "test",
-        "pass_expiry": "0",
+        "pass_expiry": "2013,01,25",
         "active": true
     },
     {
         "username": "Jason",
-        "password": "jasonspassword",
+        "password": "1",
         "secQ": "What is your last name?",
         "secA": "Borrowman",
         "pass_expiry": "0",
@@ -17,7 +17,7 @@
     },
     {
         "username": "Richard",
-        "password": "richardspassword",
+        "password": "1",
         "secQ": "What is your last name?",
         "secA": "Ofstie",
         "pass_expiry": "0",
@@ -25,7 +25,7 @@
     },
     {
         "username": "YiChao",
-        "password": "40",
+        "password": "1",
         "secQ": "What is your last name",
         "secA": "Zhang",
         "pass_expiry": "0",

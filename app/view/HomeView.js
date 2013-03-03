@@ -32,7 +32,6 @@ Ext.define('secvid.view.HomeView', {
                         style: 'background-color: #000000;',
                         html: [
                             '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>',
-                            //'<div style="overflow:scroll;-webkit-overflow-scrolling:touch;position:fixed;height:50%;width:50%"><iframe style="position:fixed;top:0px;right:0px;height:50%;width:50%" src="./jwplayer.html" scrolling="false"></iframe></div>',
                         ]
                     },
                 ]
