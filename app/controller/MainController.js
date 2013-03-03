@@ -99,7 +99,7 @@ Ext.define("secvid.controller.MainController", {
     onSaveServerCommand: function()
     {
         console.log('onSaveServerCommand');
-        var ServerStore = this.ServerStore;
+        var ServerStore = Ext.getStore('ServerStore');
         
         ServerStore.removeAll();
         ServerStore.sync();
