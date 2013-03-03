@@ -3,7 +3,7 @@ Ext.define("secvid.store.ServerStore", {
     config:
     {
         model: 'secvid.model.ServerModel',
-        storeId: 'taskcodeLocalStore',
+        storeId: 'ServerStore',
         proxy:
         {
             type: 'localstorage',
