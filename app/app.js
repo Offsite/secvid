@@ -1,8 +1,8 @@
 Ext.application({
     name: 'secvid',
-    models:         ['deviceModel', 'userModel'],
+    models:         ['deviceModel', 'userModel','ServerModel'],
     views:          ['LoginFormView','HomeView','SettingsView','ServerSettingsView', 'SupportView', 'Camera1View', 'Camera2View', 'HomeViewPlaceHolder'],
-    stores:         ['deviceStore', 'userStore'],
+    stores:         ['deviceStore', 'userStore','ServerStore'],
     controllers:    ['MainController'],
 
     launch: function() {

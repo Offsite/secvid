@@ -1,4 +1,4 @@
-Ext.define("secvid.store.SeverStore", {
+Ext.define("secvid.store.ServerStore", {
     extend: "Ext.data.Store",
     config:
     {

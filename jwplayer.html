@@ -18,7 +18,7 @@
     
         <script type='text/javascript'>
           jwplayer('player_1').setup({
-            file: 'rtmp://10.227.2.221/flvplayback/cam',
+            file: 'rtmp://192.168.0.188/flvplayback/cam1',
             width: "100%",
             height: "100%",
             primary: "flash",
@@ -28,9 +28,10 @@
             mute: "true",
           });
         </script>
+        
         <script type='text/javascript'>
           jwplayer('player_2').setup({
-            file: "rtmp://s2pchzxmtymn2k.cloudfront.net/cfx/st/mp4:sintel.mp4",
+            file: 'rtmp://192.168.0.188/flvplayback/cam2',
             width: "100%",
             height: "100%",
             primary: "flash",
@@ -39,30 +40,6 @@
             //controls: "false",
             mute: "true",
             allowscriptaccess:'always',
-          });
-        </script>
-        <script type='text/javascript'>
-          jwplayer('player_3').setup({
-            file: "rtmp://s2pchzxmtymn2k.cloudfront.net/cfx/st/mp4:sintel.mp4",
-            width: "100%",
-            height: "100%",
-            primary: "flash",
-            image: "http://content.bitsontherun.com/thumbs/3XnJSIm4-640.jpg",
-            autostart: "true",
-            //controls: "false",
-            mute: "true",
-          });
-        </script>
-        <script type='text/javascript'>
-          jwplayer('player_4').setup({
-            file: "rtmp://s2pchzxmtymn2k.cloudfront.net/cfx/st/mp4:sintel.mp4",
-            width: "100%",
-            height: "100%",
-            primary: "flash",
-            image: "http://content.bitsontherun.com/thumbs/3XnJSIm4-640.jpg",
-            autostart: "true",
-            //controls: "false",
-            mute: "true",
           });
         </script>
     </body> 

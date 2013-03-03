@@ -99,7 +99,16 @@ Ext.define("secvid.controller.MainController", {
     onSaveServerCommand: function()
     {
         console.log('onSaveServerCommand');
+        var ServerStore = this.ServerStore;
+        
+        ServerStore.removeAll();
+        ServerStore.sync();
+        
+        var newValues = this.getServerSettings();
+        ServerStore.add(newValues);
         window.global.settingsSaved = 1;  //*********************temporary. In the future, should only be set if settings are correctly saved.**************
+        console.log(newValues.serverAddress);
+        console.log(newValues.portNumber);
         console.log("settingsSaved is " + window.global.settingsSaved);
     },
     onStartHomeCommand: function()
@@ -200,7 +209,13 @@ Ext.define("secvid.controller.MainController", {
         var HID = "01"; //TEMPORARY OVERRIDE  - SHOULD GET THE REAL HID
         return HID;
     },
-
+    getServerSettings: function()
+    {
+        var ServerSettingsView = this.getServerSettingsView();
+        var newvalues = ServerSettingsView.getValues();
+        console.log("The IP Address is " + newvalues.ipAddress);
+        return newvalues;
+    },
     getusername: function()
     {
         var LoginFormView = this.getLoginFormView();
@@ -463,7 +478,7 @@ Ext.define("secvid.controller.MainController", {
         deviceStore.load();
         var userStore = Ext.getStore('userStore');
         userStore.load();
-        
+        var ServerStore = Ext.getStore('ServerStore');
         
         //Global Variables
         window.global = 
@@ -471,9 +486,7 @@ Ext.define("secvid.controller.MainController", {
                 userLoggedOn: 0,
                 settingsSaved: 0,
                 currentUser: 0
-                
             };
-        
     
         console.log('launch MainController');
 	},

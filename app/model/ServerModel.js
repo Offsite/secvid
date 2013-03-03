@@ -6,7 +6,7 @@ Ext.define('secvid.model.ServerModel', {
         identifier: 'uuid',
 		fields: 
 		[
-			{name: 'ipAddress', type: 'string'},
+			{name: 'serverAddress', type: 'string'},
 			{name: 'portNumber', type: 'string'},
 		],
 	}
