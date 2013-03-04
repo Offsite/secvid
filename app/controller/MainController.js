@@ -160,6 +160,7 @@ Ext.define("secvid.controller.MainController", {
         {
             console.log('activateHomeView');
             var HomeView = this.getHomeView();
+            HomeView.setHtml('<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>');
             Ext.Viewport.animateActiveItem(HomeView, {type: 'reveal', direction: 'left'});
         }
         else
@@ -174,12 +175,7 @@ Ext.define("secvid.controller.MainController", {
         {
             console.log('activateHomeFromSettingsView');
             var HomeView = this.getHomeView();
-            if(!window.global.firstLogOn)
-            {
-                HomeView.setHtml('<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>');
-                window.global.firstLogOn = 1;
-            }
-            
+            HomeView.setHtml('<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>');
             Ext.Viewport.animateActiveItem(HomeView, {type: 'reveal', direction: 'right'});
         }
         else
@@ -187,15 +183,11 @@ Ext.define("secvid.controller.MainController", {
             Ext.Msg.alert('User Not Logged In', 'Please Login', Ext.emptyFn);
         }
     },
-    activateLoginFormView: function()
-    {
-        console.log('activateLoginFormView');
-        var LoginFormView = this.getLoginFormView();
-        Ext.Viewport.animateActiveItem(LoginFormView, {type: 'cover', direction: 'right'});
-    },
     activateSettingsView: function()
     {
         console.log('activateSettingsView');
+        var HomeView = this.getHomeView();
+        HomeView.setHtml('switching to settings');
         var SettingsView = this.getSettingsView();
         Ext.Viewport.animateActiveItem(SettingsView, {type: 'cover', direction: 'left'})
     },
