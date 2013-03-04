@@ -26,14 +26,9 @@ Ext.define('secvid.view.HomeView', {
             {
                 xtype: 'panel',
                 layout: 'card',
-                items: [
-                    {
-                        xtype: 'panel',
-                        style: 'background-color: #000000;',
-                        html: [
-                            '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>',
-                        ]
-                    },
+                style: 'background-color: #000000;',
+                html: [
+                    '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>',
                 ]
             },
             {
