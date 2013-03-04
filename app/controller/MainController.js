@@ -164,10 +164,19 @@ Ext.define("secvid.controller.MainController", {
         var serverAddress = serverSettings.get('serverAddress');
         var portNumber = serverSettings.get('portNumber');
         
+        if(portNumber == 80)
+        {
+            var server = serverAddress;
+        }
+        else
+        {
+            var server = serverAddress+':'+portNumber;
+        }
+        
         console.log(serverAddress);
         console.log(portNumber);
         
-        var iframeUrl = '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html'+ '?' + serverAddress + ':' + portNumber + '"scrolling="false"></iframe>';
+        var iframeUrl = '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html'+ '?' + server + '"scrolling="false"></iframe>';
         console.log("now userLoggedOn is" + window.global.userLoggedOn);
         if (window.global.userLoggedOn)
         {
@@ -188,8 +197,16 @@ Ext.define("secvid.controller.MainController", {
         var serverAddress = serverSettings.get('serverAddress');
         var portNumber = serverSettings.get('portNumber');
         
+        if(portNumber == 80)
+        {
+            var server = serverAddress;
+        }
+        else
+        {
+            var server = serverAddress+':'+portNumber;
+        }
         
-        var iframeUrl = '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html'+ '?' + serverAddress + ':' + portNumber + '"scrolling="false"></iframe>';
+        var iframeUrl = '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html'+ '?' + server + '"scrolling="false"></iframe>';
         console.log("now userLoggedOn is" + window.global.userLoggedOn);
         if (window.global.userLoggedOn)
         {

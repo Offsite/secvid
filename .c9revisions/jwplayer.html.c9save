@@ -85,3 +85,4 @@
 {"ts":1362373511449,"patch":[[{"diffs":[[0,"location.href;\r\n"],[1,"        console.log(currentUrl);\r\n"],[0,"        var leng"]],"start1":636,"start2":636,"length1":32,"length2":66}]],"length":2206,"saved":false}
 {"contributors":[],"silentsave":false,"ts":1362376187895,"patch":[[{"diffs":[[0,"rAddress);\r\n"],[1,"        var playerAddress = 'rtmp://'+serverAddress+'/flvplayback/cam1';\r\n        console.log(playerAddress);\r\n"],[0,"        \r\n  "]],"start1":829,"start2":829,"length1":24,"length2":135}]],"length":2317,"saved":false}
 {"ts":1362376196834,"patch":[[{"diffs":[[0,"le: "],[-1,"'rtmp://'+this.serverAddress+'/flvplayback/cam1'"],[1,"playerAddress"],[0,",\r\n "]],"start1":1058,"start2":1058,"length1":56,"length2":21}]],"length":2282,"saved":false}
+{"ts":1362378270790,"patch":[[{"diffs":[[0,"//'+"],[-1,"this."],[0,"serv"]],"start1":1794,"start2":1794,"length1":13,"length2":8}]],"length":2277,"saved":false}
