@@ -25,7 +25,7 @@ Ext.define('secvid.view.HomeView', {
             },
             {
                 xtype: 'panel',
-                style: 'background-color: #000000;',
+                style: 'background-color: #FFFFFF;',
                 id: 'PlayerPanel',
                 html: [
                     '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>',
