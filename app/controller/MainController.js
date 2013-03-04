@@ -160,7 +160,7 @@ Ext.define("secvid.controller.MainController", {
     activateHomeView: function()
     {
         var ServerStore = Ext.getStore('ServerStore');
-        var serverSettings = ServerStore.getAt(0);
+        var serverSettings = ServerStore.first();
         var iframeUrl = '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html'+ '?' + serverSettings.serverAddress + ':' + serverSettings.portNumber + '"scrolling="false"></iframe>';
         console.log("now userLoggedOn is" + window.global.userLoggedOn);
         if (window.global.userLoggedOn)
