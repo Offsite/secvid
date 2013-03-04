@@ -4,6 +4,7 @@ Ext.define('secvid.view.ServerSettingsView', {
     requires:   'Ext.form.FieldSet',
     alias:  'widget.ServerSettingsView',
     config: {
+        scrollable: 'vertical',
         items: [
             {
                 xtype: 'toolbar',
@@ -28,7 +29,6 @@ Ext.define('secvid.view.ServerSettingsView', {
             },*/
             {
                 xtype:  'fieldset',
-                minHeight: '50%',
                 title:  "Server Address",
                 instructions:   "Enter the Server's IP Address and Port",
                 id: 'serverData',

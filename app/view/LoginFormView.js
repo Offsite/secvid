@@ -4,6 +4,7 @@ Ext.define('secvid.view.LoginFormView', {
     requires:   'Ext.form.FieldSet',
     alias:  'widget.LoginFormView',
     config: {
+        scrollable: 'vertical',
         items: [
             {
                 xtype: 'toolbar',
@@ -23,7 +24,6 @@ Ext.define('secvid.view.LoginFormView', {
             },
             {
                 xtype:  'fieldset',
-                minHeight: '50%',
                 title:  'Change Login',
                 instructions:   'Enter your user name and password.',
                 //id: 'loginData',
