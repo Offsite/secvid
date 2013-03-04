@@ -483,6 +483,8 @@ Ext.define("secvid.controller.MainController", {
                 settingsSaved: 0,
                 currentUser: 0
             };
+            
+        this.activateSettingsView();
     
         console.log('launch MainController');
 	},

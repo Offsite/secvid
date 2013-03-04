@@ -25,7 +25,7 @@ Ext.application({
         };
         
         
-        //Ext.Viewport.add([homeView, SettingsView, Camera1View, Camera2View]);
-        Ext.Viewport.add([SettingsView, Camera1View, Camera2View, homeView]);
+        Ext.Viewport.add([homeView, SettingsView, Camera1View, Camera2View]);
+        //Ext.Viewport.add([SettingsView, Camera1View, Camera2View, homeView]);
     }
 });
