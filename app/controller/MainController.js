@@ -134,12 +134,16 @@ Ext.define("secvid.controller.MainController", {
     activateCamera1View: function()
     {
         console.log('activateCamera1View');
+        var HomeView = this.getHomeView();
+        HomeView.setHtml('switching to Camera 1 Info');
         var Camera1View = this.getCamera1View();
         Ext.Viewport.animateActiveItem(Camera1View, {type: 'cover', direction: 'right'});
     },
     activateCamera2View: function()
     {
         console.log('activateCamera2View');
+        var HomeView = this.getHomeView();
+        HomeView.setHtml('switching to Camera 2 Info');
         var Camera2View = this.getCamera2View();
         Ext.Viewport.animateActiveItem(Camera2View, {type: 'cover', direction: 'right'});
     },
@@ -155,12 +159,15 @@ Ext.define("secvid.controller.MainController", {
     },
     activateHomeView: function()
     {
+        var ServerStore = Ext.getStore('ServerStore');
+        var serverSettings = ServerStore.getAt(0);
+        var iframeUrl = '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html'+ '?' + serverSettings.serverAddress + ':' + serverSettings.portNumber + '"scrolling="false"></iframe>';
         console.log("now userLoggedOn is" + window.global.userLoggedOn);
         if (window.global.userLoggedOn)
         {
             console.log('activateHomeView');
             var HomeView = this.getHomeView();
-            HomeView.setHtml('<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>');
+            HomeView.setHtml(iframeUrl);
             Ext.Viewport.animateActiveItem(HomeView, {type: 'reveal', direction: 'left'});
         }
         else
@@ -170,12 +177,15 @@ Ext.define("secvid.controller.MainController", {
     },
     activateHomeFromSettingsView: function()
     {
+        var ServerStore = Ext.getStore('ServerStore');
+        var serverSettings = ServerStore.getAt(0);
+        var iframeUrl = '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html'+ '?' + serverSettings.serverAddress + ':' + serverSettings.portNumber + '"scrolling="false"></iframe>';
         console.log("now userLoggedOn is" + window.global.userLoggedOn);
         if (window.global.userLoggedOn)
         {
             console.log('activateHomeFromSettingsView');
             var HomeView = this.getHomeView();
-            HomeView.setHtml('<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>');
+            HomeView.setHtml(iframeUrl);
             Ext.Viewport.animateActiveItem(HomeView, {type: 'reveal', direction: 'right'});
         }
         else
