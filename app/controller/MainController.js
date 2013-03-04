@@ -161,7 +161,7 @@ Ext.define("secvid.controller.MainController", {
     {
         var ServerStore = Ext.getStore('ServerStore');
         var serverSettings = ServerStore.first();
-        var iframeUrl = '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html'+ '?' + serverSettings.serverAddress + ':' + serverSettings.portNumber + '"scrolling="false"></iframe>';
+        var iframeUrl = '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html'+ '?' + serverSettings.get('serverAddress') + ':' + serverSettings.get('portNumber') + '"scrolling="false"></iframe>';
         console.log("now userLoggedOn is" + window.global.userLoggedOn);
         if (window.global.userLoggedOn)
         {
