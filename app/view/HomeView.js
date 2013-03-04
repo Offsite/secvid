@@ -23,11 +23,11 @@ Ext.define('secvid.view.HomeView', {
                     },
                 ]
             },
-            /*{
+            {
                 xtype: 'panel',
                 style: 'background-color: #000000;',
                 id: 'PlayerPanel',
-            },*/
+            },
             {
                 xtype: 'toolbar',
                 docked: 'bottom',
