@@ -110,6 +110,7 @@ Ext.define("secvid.controller.MainController", {
     },
     onStartHomeCommand: function()
     {
+        
         this.activateHomeView();
     },
     onStartHomeFromSettingsCommand: function()
