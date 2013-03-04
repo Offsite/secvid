@@ -160,7 +160,23 @@ Ext.define("secvid.controller.MainController", {
         {
             console.log('activateHomeView');
             var HomeView = this.getHomeView();
+            HomeView.setHtml('<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>');
             Ext.Viewport.animateActiveItem(HomeView, {type: 'reveal', direction: 'left'});
+        }
+        else
+        {
+            Ext.Msg.alert('User Not Logged In', 'Please Login', Ext.emptyFn);
+        }
+    },
+    activateHomeFromSettingsView: function()
+    {
+        console.log("now userLoggedOn is" + window.global.userLoggedOn);
+        if (window.global.userLoggedOn)
+        {
+            console.log('activateHomeFromSettingsView');
+            var HomeView = this.getHomeView();
+            HomeView.setHtml('<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>');
+            Ext.Viewport.animateActiveItem(HomeView, {type: 'reveal', direction: 'right'});
         }
         else
         {
@@ -178,24 +194,6 @@ Ext.define("secvid.controller.MainController", {
         console.log('activateSettingsView');
         var SettingsView = this.getSettingsView();
         Ext.Viewport.animateActiveItem(SettingsView, {type: 'cover', direction: 'left'})
-    },
-    activateHomeFromSettingsView: function()
-    {
-        console.log("now userLoggedOn is" + window.global.userLoggedOn);
-        if (window.global.userLoggedOn)
-        {
-            console.log('activateHomeFromSettingsView');
-            var HomeView = this.getHomeView();
-            Ext.Viewport.animateActiveItem(HomeView, {type: 'reveal', direction: 'right'});
-        }
-        else
-        {
-            Ext.Msg.alert('User Not Logged In', 'Please Login', Ext.emptyFn);
-        }
-        
-    
-        
-        
     },
     
     //----------------- Login + security stuff --------------------------
