@@ -16,10 +16,12 @@
     </td>
 </table>
         <script type='text/javascript'>
+        
         var currentUrl = window.location.href;
         var length = currentUrl.length;
-        var serverAddress = currentUrl.substr(str.indexOf("?") + 1);
+        var serverAddress = currentUrl.substr(currentUrl.indexOf("?") + 1);
         console.log(serverAddress);
+        
         console.log('player 1 created');
           jwplayer('player_1').setup({
             file: 'rtmp://'+this.serverAddress+'/flvplayback/cam1',
@@ -35,11 +37,13 @@
         </script>
         
         <script type='text/javascript'>
+        
         console.log('player 2 created');
         var currentUrl2 = window.location.href;
         var length = currentUrl2.length;
-        var serverAddress2 = currentUrl2.substr(str.indexOf("?") + 1);
+        var serverAddress2 = currentUrl2.substr(currentUrl.indexOf("?") + 1);
         console.log(serverAddress2);
+        
           jwplayer('player_2').setup({
             file: 'rtmp://'+this.serverAddress2+'/flvplayback/cam2'
             //file: "rtmp://s2pchzxmtymn2k.cloudfront.net/cfx/st/mp4:sintel.mp4",
