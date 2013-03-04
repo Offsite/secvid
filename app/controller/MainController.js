@@ -19,7 +19,6 @@ Ext.define("secvid.controller.MainController", {
 			HomeView: "HomeView",
             LoginFormView: 'LoginFormView',
 			SettingsView: 'SettingsView',
-
             ServerSettingsView: 'ServerSettingsView',
             SupportView: 'SupportView',
             Camera1View: 'Camera1View',
@@ -440,9 +439,9 @@ Ext.define("secvid.controller.MainController", {
                                                                 //Start Session Timer
                                                                 //Alert App that Login is successful
                                                                 window.global.userLoggedOn = 1;
-                                                                this.HomeView = Ext.Viewport.add({
+                                                                /*this.HomeView = Ext.Viewport.add({
                                                                     xtype: 'HomeView'
-                                                                    });
+                                                                    });*/
                                                                 //Display status message to App Logic
                                                                 Ext.Msg.alert('Login Status', 'Login Successful', Ext.emptyFn);
                                                                 } 
