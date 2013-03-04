@@ -160,7 +160,6 @@ Ext.define("secvid.controller.MainController", {
         {
             console.log('activateHomeView');
             var HomeView = this.getHomeView();
-            HomeView.setHtml('<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>');
             Ext.Viewport.animateActiveItem(HomeView, {type: 'reveal', direction: 'left'});
         }
         else
@@ -175,7 +174,12 @@ Ext.define("secvid.controller.MainController", {
         {
             console.log('activateHomeFromSettingsView');
             var HomeView = this.getHomeView();
-            HomeView.setHtml('<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>');
+            if(!window.global.firstLogOn)
+            {
+                HomeView.setHtml('<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>');
+                window.global.firstLogOn = 1;
+            }
+            
             Ext.Viewport.animateActiveItem(HomeView, {type: 'reveal', direction: 'right'});
         }
         else
@@ -477,6 +481,7 @@ Ext.define("secvid.controller.MainController", {
         //Global Variables
         window.global = 
             {
+                firstLogOn: 0,
                 userLoggedOn: 0,
                 settingsSaved: 0,
                 currentUser: 0
