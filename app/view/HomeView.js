@@ -14,7 +14,7 @@ Ext.define('secvid.view.HomeView', {
                         align: 'right',
                         iconCls: 'settings',
                         text: 'Settings',
-                        iconMask: 'true',
+                        //iconMask: 'true',
                         itemId: 'settingsButton'
                     },
                     {

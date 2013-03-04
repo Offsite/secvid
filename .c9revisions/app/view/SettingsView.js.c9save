@@ -16,3 +16,4 @@
 {"contributors":[],"silentsave":false,"ts":1361833479375,"patch":[[{"diffs":[[0,"    "],[-1,"anchor: \"50% 100%\","],[1,"flex: 1,\r\n                "],[0,"\r\n  "]],"start1":649,"start2":649,"length1":27,"length2":34}]],"length":1527,"saved":false}
 {"ts":1361833550402,"patch":[[{"diffs":[[0," config: {\r\n"],[1,"        layout: 'hbox',\r\n"],[0,"        scro"]],"start1":117,"start2":117,"length1":24,"length2":49}]],"length":1552,"saved":false}
 {"contributors":[],"silentsave":false,"ts":1362370896892,"patch":[[{"diffs":[[0,"k: 'true',\r\n"],[1,"                        text: 'Home',\r\n"],[0,"            "]],"start1":448,"start2":448,"length1":24,"length2":63}]],"length":1591,"saved":false}
+{"ts":1362371084183,"patch":[[{"diffs":[[0,"            "],[1,"//"],[0,"iconMask: 't"]],"start1":429,"start2":429,"length1":24,"length2":26}]],"length":1593,"saved":false}
