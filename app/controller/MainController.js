@@ -162,7 +162,7 @@ Ext.define("secvid.controller.MainController", {
         var ServerStore = Ext.getStore('ServerStore');
         var serverSettings = ServerStore.first();
         var serverAddress = serverSettings.get('serverAddress');
-        var portNumber = serverSettings.get('portnumber');
+        var portNumber = serverSettings.get('portNumber');
         
         console.log(serverAddress);
         console.log(portNumber);
@@ -185,7 +185,11 @@ Ext.define("secvid.controller.MainController", {
     {
         var ServerStore = Ext.getStore('ServerStore');
         var serverSettings = ServerStore.getAt(0);
-        var iframeUrl = '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html'+ '?' + serverSettings.serverAddress + ':' + serverSettings.portNumber + '"scrolling="false"></iframe>';
+        var serverAddress = serverSettings.get('serverAddress');
+        var portNumber = serverSettings.get('portNumber');
+        
+        
+        var iframeUrl = '<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html'+ '?' + serverAddress + ':' + portNumber + '"scrolling="false"></iframe>';
         console.log("now userLoggedOn is" + window.global.userLoggedOn);
         if (window.global.userLoggedOn)
         {
