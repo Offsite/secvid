@@ -176,8 +176,8 @@ Ext.define("secvid.controller.MainController", {
             var HomeView = this.getHomeView();
             if(!window.global.firstLogOn)
             {
-                Ext.getCmp('PlayerPanel');
-                PlayerPanel.setHtml('<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>');
+                var playpan = Ext.getCmp('PlayerPanel');
+                playpan.setHtml('<iframe style="position:fixed;height:100%;width:100%" src="./jwplayer.html" scrolling="false"></iframe>');
                 window.global.firstLogOn = 1;
             }
             
