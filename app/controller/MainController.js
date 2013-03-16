@@ -114,7 +114,15 @@ Ext.define("secvid.controller.MainController", {
     },
     onStartHomeFromSettingsCommand: function()
     {
-        this.activateHomeFromSettingsView();
+        HomeView = this.getHomeView();
+        if(HomeView)
+        {
+            this.activateHomeFromSettingsView();
+        }
+        else
+        {
+            Ext.Msg.alert('Error','Please Login First')
+        }
     },
     onStartLoginFormCommand: function()
     {
@@ -516,7 +524,7 @@ Ext.define("secvid.controller.MainController", {
                 currentUser: 0
             };
             
-        this.activateSettingsView();
+        //this.activateSettingsView();
     
         console.log('launch MainController');
 	},
